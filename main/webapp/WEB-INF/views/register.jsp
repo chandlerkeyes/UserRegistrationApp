@@ -3,13 +3,30 @@
   User: chand
   Date: 7/21/2017
   Time: 11:04 AM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Spring Demo</title>
+    <!-- CSS TEMPLATE FOUND ON CODEPEN.IO-->
     <style>
+        h3 {
+            position: relative;
+            color: #323C50;
+            padding-left: 625px;
+            font-family: 'Open Sans', sans-serif;
+            top: 25px;
+        }
+        form {
+            border: 1px solid black;
+            margin: 50px 500px;
+            padding: 0px 50px;
+            background-color: #323C50;
+        }
+        label {
+            color: tomato;
+            font-family: 'Open Sans', sans-serif;
+        }
         /* Full-width input fields */
         input[type=text], input[type=date] {
             width: 100%;
@@ -64,14 +81,14 @@
     </style>
 </head>
 <body>
+<h3> Please enter your information in the required fields</h3>
+<!-- Form that collects the user's information, and is then placed into mySQL database -->
 <form action="/addUserSuccess">
     <div class="container">
         <label><b>First Name</b></label>
-        <input type="text" placeholder="Enter Name" name="firstName" required>
-
+        <input type="text" placeholder="Enter First Name" name="firstName" required>
         <label><b>Last Name</b></label>
         <input type="text" placeholder="Enter Last Name" name="lastName" required>
-
         <label><b>Address 1</b></label>
         <input type="text" placeholder="Enter Address" name="address1" required>
         <label><b>Address 2</b></label>
@@ -84,7 +101,6 @@
         <input type="text" placeholder="Enter Zip Code" name="zipCode" required>
         <label><b>Country</b></label>
         <input type="text" placeholder="Enter Country" name="country" required>
-
 
         <div class="clearfix">
             <button type="button"  class="cancel">Cancel</button>

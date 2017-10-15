@@ -5,12 +5,12 @@
   User: chand
   Date: 10/12/2017
   Time: 10:59 PM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Admin</title>
+    <!-- CSS TEMPLATE -->
     <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
         body {
@@ -131,8 +131,8 @@
 
 <form method="post">
     <h1>Registered Users</h1>
-<table class = "container">
-    <thead>
+    <table class="container">
+        <thead>
         <tr>
             <th><h1>First Name</h1></th>
             <th><h1>Last Name</h1></th>
@@ -144,35 +144,44 @@
             <th><h1>Country</h1></th>
             <th><h1>Date</h1></th>
         </tr>
-    </thead>
+        </thead>
+        <!-- Loops through each row and places the data into the html table -->
         <%
-            try
-            {
+            try {
                 Class.forName("com.mysql.jdbc.Driver");
-                String url="jdbc:mysql://dbinstance.cmgiitqbyhub.us-east-2.rds.amazonaws.com:3306/registration";
-                String username="helloworld";
-                String password="brokk12345";
-                String query="SELECT * FROM registration.UserRegistration ORDER BY date DESC;";
-                Connection conn=DriverManager.getConnection(url, username, password);
-                Statement stmt=conn.createStatement();
-                ResultSet rs=stmt.executeQuery(query);
-                while(rs.next()) {
+                String url = "jdbc:mysql://dbinstance.cmgiitqbyhub.us-east-2.rds.amazonaws.com:3306/registration";
+                String username = "helloworld";
+                String password = "brokk12345";
+                String query = "SELECT * FROM registration.UserRegistration ORDER BY date DESC;";
+                Connection conn = DriverManager.getConnection(url, username, password);
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()) {
         %>
         <tbody>
         <tr>
-        <td class="text-left"><%=rs.getString("firstName") %></td>
-        <td class="text-left"><%=rs.getString("lastName") %></td>
-        <td class="text-left"><%=rs.getString("address1") %></td>
-        <td class="text-left"><%=rs.getString("address2") %></td>
-        <td class="text-left"><%=rs.getString("city") %></td>
-        <td class="text-left"><%=rs.getString("state") %></td>
-        <td class="text-left"><%=rs.getString("zip") %></td>
-        <td class="text-left"><%=rs.getString("country") %></td>
-        <td class="text-left"><%=rs.getString("date") %></td>
+            <td class="text-left"><%=rs.getString("firstName") %>
+            </td>
+            <td class="text-left"><%=rs.getString("lastName") %>
+            </td>
+            <td class="text-left"><%=rs.getString("address1") %>
+            </td>
+            <td class="text-left"><%=rs.getString("address2") %>
+            </td>
+            <td class="text-left"><%=rs.getString("city") %>
+            </td>
+            <td class="text-left"><%=rs.getString("state") %>
+            </td>
+            <td class="text-left"><%=rs.getString("zip") %>
+            </td>
+            <td class="text-left"><%=rs.getString("country") %>
+            </td>
+            <td class="text-left"><%=rs.getString("date") %>
+            </td>
         </tr>
         </tbody>
 
-                <%
+        <%
 
             }
         %>
@@ -181,9 +190,7 @@
             rs.close();
             stmt.close();
             conn.close();
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     %>

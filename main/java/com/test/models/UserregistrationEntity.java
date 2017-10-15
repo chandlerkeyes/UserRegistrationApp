@@ -1,8 +1,6 @@
 package com.test.models;
 
 import javax.persistence.*;
-import java.sql.Time;
-import java.util.Date;
 
 @Entity
 @Table(name = "userregistration", schema = "registration", catalog = "")
@@ -16,7 +14,9 @@ public class UserregistrationEntity {
     private String state;
     private String zip;
     private String country;
-//    private java.sql.Date date;
+
+    //These are my getters and setters for the rows in mySQL database. It allows
+    //me to manipulate what goes in an out.
 
     @Id
     @Column(name = "idUserRegistration", nullable = false)

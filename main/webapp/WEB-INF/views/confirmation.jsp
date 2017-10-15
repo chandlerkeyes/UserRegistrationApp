@@ -3,7 +3,6 @@
   User: chand
   Date: 10/12/2017
   Time: 9:54 PM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -26,6 +25,8 @@
         background-color: #696969;
         height: 100%;
         margin:0px;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
 </style>
@@ -35,7 +36,6 @@
         <span class="glyphicon glyphicon-ok"></span>
         <p>THANK YOU FOR REGISTERING</p>
     </div>
-
 </div>
 </body>
 </html>
