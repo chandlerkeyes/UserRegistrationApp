@@ -149,10 +149,10 @@
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                String url="jdbc:mysql://localhost:3306/registration";
-                String username="root";
-                String password="brokk123";
-                String query="SELECT * FROM userregistration ORDER BY date DESC;";
+                String url="jdbc:mysql://dbinstance.cmgiitqbyhub.us-east-2.rds.amazonaws.com:3306/registration";
+                String username="helloworld";
+                String password="brokk12345";
+                String query="SELECT * FROM registration.UserRegistration ORDER BY date DESC;";
                 Connection conn=DriverManager.getConnection(url, username, password);
                 Statement stmt=conn.createStatement();
                 ResultSet rs=stmt.executeQuery(query);
