@@ -8,6 +8,18 @@
 <html>
 <head>
     <title>Spring Demo</title>
+    <!-- This validates the zip code, the rest of the fields in the form are required,
+    so the user wont be allowed to continue unless they enter their information -->
+
+    <script>
+        function validateForm() {
+            var x = document.forms["registerForm"]["zipCode"].value;
+            if (x.length < 5) {
+                alert("invalid zip code");
+                return false;
+            }
+        }
+    </script>
     <!-- CSS TEMPLATE FOUND ON CODEPEN.IO-->
     <style>
         h3 {
@@ -83,7 +95,7 @@
 <body>
 <h3> Please enter your information in the required fields</h3>
 <!-- Form that collects the user's information, and is then placed into mySQL database -->
-<form action="/addUserSuccess">
+<form name = "registerForm" onsubmit="return validateForm()" action="/addUserSuccess">
     <div class="container">
         <label><b>First Name</b></label>
         <input type="text" placeholder="Enter First Name" name="firstName" required>
