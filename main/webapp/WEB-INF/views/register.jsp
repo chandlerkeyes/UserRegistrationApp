@@ -7,7 +7,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Spring Demo</title>
+    <title>Registration</title>
     <!-- This validates the zip code, the rest of the fields in the form are required,
     so the user wont be allowed to continue unless they enter their information -->
 
@@ -95,7 +95,7 @@
 <body>
 <h3> Please enter your information in the required fields</h3>
 <!-- Form that collects the user's information, and is then placed into mySQL database -->
-<form name = "registerForm" onsubmit="return validateForm()" action="/addUserSuccess">
+<form name = "registerForm" onsubmit="return validateForm()" action="/addUserSuccess" method="get">
     <div class="container">
         <label><b>First Name</b></label>
         <input type="text" placeholder="Enter First Name" name="firstName" required>

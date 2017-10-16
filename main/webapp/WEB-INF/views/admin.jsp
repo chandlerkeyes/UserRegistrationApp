@@ -129,7 +129,7 @@
 <%@ page import="java.sql.DriverManager" %>
 
 
-<form method="post">
+<%--<form method="get">--%>
     <h1>Registered Users</h1>
     <table class="container">
         <thead>
@@ -149,9 +149,9 @@
         <%
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                String url = "jdbc:mysql://dbinstance.cmgiitqbyhub.us-east-2.rds.amazonaws.com:3306/registration";
-                String username = "helloworld";
-                String password = "brokk12345";
+                String url = "jdbc:mysql://localhost:3306/registration";
+                String username = "root";
+                String password = "brokk123";
                 String query = "SELECT * FROM registration.UserRegistration ORDER BY date DESC;";
                 Connection conn = DriverManager.getConnection(url, username, password);
                 Statement stmt = conn.createStatement();
@@ -194,6 +194,6 @@
             e.printStackTrace();
         }
     %>
-</form>
+<%--</form>--%>
 </body>
 </html>
