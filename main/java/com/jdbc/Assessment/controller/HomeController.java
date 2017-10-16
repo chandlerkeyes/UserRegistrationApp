@@ -27,7 +27,7 @@ public class HomeController {
                 ModelAndView("admin", "", "");
     }
 
-    @RequestMapping(value = "/addUserSuccess")
+    @RequestMapping(value = "/addUserSuccess", method = RequestMethod.GET)
     public String addNewUser(@RequestParam("firstName") String firstName,
                              @RequestParam("lastName") String lastName,
                              @RequestParam("address1") String address1,

@@ -108,16 +108,6 @@ public class UserregistrationEntity {
         this.country = country;
     }
 
-//    @Basic
-//    @Column(name = "date", nullable = true)
-//    public java.sql.Date getDate() {
-//        return date;
-//    }
-
-//    public void setDate(java.sql.Date date) {
-//        this.date = date;
-//    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
