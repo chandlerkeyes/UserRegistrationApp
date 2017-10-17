@@ -99,7 +99,7 @@ public class UserregistrationEntity {
     }
 
     @Basic
-    @Column(name = "country", nullable = false, length = 45)
+    @Column(name = "country", nullable = false, length = 2)
     public String getCountry() {
         return country;
     }

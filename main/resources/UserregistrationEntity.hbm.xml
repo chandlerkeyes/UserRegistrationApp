@@ -30,7 +30,7 @@
             <column name="zip" sql-type="char(5)" length="5"/>
         </property>
         <property name="country">
-            <column name="country" sql-type="varchar(45)" length="45"/>
+            <column name="country" sql-type="char(2)" length="45"/>
         </property>
     </class>
 </hibernate-mapping>

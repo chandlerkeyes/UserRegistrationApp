@@ -14,9 +14,14 @@
     <script>
         function validateForm() {
             var x = document.forms["registerForm"]["zipCode"].value;
-            if (x.length < 5) {
+            if (x.length < 5 || x.length > 9) {
                 alert("invalid zip code");
                 return false;
+            }
+            var y = document.forms["registerForm"]["country"].value;
+            if (!(y == "US")) {
+                alert("US only");
+                return false
             }
         }
     </script>
