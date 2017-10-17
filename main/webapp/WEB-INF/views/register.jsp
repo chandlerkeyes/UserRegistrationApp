@@ -25,7 +25,7 @@
         h3 {
             position: relative;
             color: #323C50;
-            padding-left: 625px;
+            padding-left: 645px;
             font-family: 'Open Sans', sans-serif;
             top: 25px;
         }
